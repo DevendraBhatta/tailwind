@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intermediate HTML Concepts</title>
+  </head>
+  <body>
+    <h1>Forms Example</h1>
+    <form action="/submit-form" method="post">
+      <label for="user-name"> Name: </label>
+      <input
+        type="text"
+        name="user-name"
+        id="user-name"
+        placeholder="Enter your name"
+        required
+      />
+      <br />
+      <label for="user-password">Password: </label>
+      <input
+        type="password"
+        name="user-password"
+        id="user-password"
+        placeholder="Enter password"
+        required
+      /><br />
+      <label>Gender:</label>
+      <input type="radio" name="gender" id="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="other" />
+      <label for="other">Other</label>
+      <input type="radio" name="gender" id="prefer-not-to-say" />
+      <label for="prefer-not-to-say">Prefer Not to Say</label><br />
+      <label> Subscribe to:</label>
+      <input type="checkbox" name="newsletter" id="newsletter" />
+      <label for="newsletter"> NewsLetter</label>
+      <input type="checkbox" name="special-offers" id="special-offers" />
+      <label for="special-offers">Special Offers</label>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="reset" />
+    </form>
+
+    <h2>HTML Entities Example</h2>
+    <p>HTML entities are used to disply special characters:</p>
+    <p>
+      Use &lt; for the less than symbol (&lt), and &amp; for the amperstand
+      symbol (&amp;).
+    </p>
+    <p>
+      Other Examples: &quot; (For double quotes)" , &apos; (for single quote')
+      and &copy; (for copyright c).
+    </p>
+
+    <h2>Table Example</h2>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>30</td>
+        <td>Male</td>
+      </tr>
+
+      <tr>
+        <td>Jans</td>
+        <td>24</td>
+        <td>Female</td>
+      </tr>
+    </table>
+
+    <h2>Iframe Example</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/_zUK6tf3n64?si=rgvfmoWwSy5MbJKV"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <h2>HTML Links and Media</h2>
+    <p>
+        <a href="https:www.example.com" target = "_blank">Visit Example Website</a>
+
+    </p>
+
+    <h3>Audio Example</h3>
+    <audio controls>
+        <source src="audio-file.mp3" type="audio/mpeg" />
+
+    </audio>
+    <video width="320" height="240" controls>
+        <source src="video-file.mp4" type="video/mp4">
+        Your browser does not support the video element
+    </video>
+
+    <h2>Data Attributes Example</h2>
+    <div data-product-id = "12345" data-category = "electronics">
+        <p>This is a product container with custom data attributes</p>
+    </div>
+
+    <h2>Forms with Validation Example</h2>
+    <form action="">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" min="18" max="99" required> <br>
+        <input type="submit" value="Submit">
+        
+
+    </form>
+
+
+  </body>
+</html>
