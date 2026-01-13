@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML Concepts</title>
+    <meta name="description" content="Adavnced HTML concepts,covering accessibility, APIs, SEO, microdata, and more">
+    <meta name="keywords" content="HTML, acessibility, SEO, ARIA, Web API, i18n">
+</head>
+<body>
+    <h2>Acessibility with ARIA</h2>
+    <nav role="navigation" aria-label="Main Navigation">
+         
+        <!-- 
+        role = "navigation" specieifies the role of the element for screen readers
+        'aria-label' provides a text description -->
+
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+
+        </ul>
+    </nav>
+
+    <div role="dialog" aria-labelledby="modal-title"
+    aria-controls="modal-content" >
+
+    <h3 id="modal-title">Dialog Title</h3>
+    <div id="modal-content">
+        <p>This is a modal dialog controlled by ARIA attribute.</p>
+        <button role="button" aria-label="Close Dialog">Close</button>
+
+    </div>
+
+    <h2>HTML5 APIs</h2>
+    <p id="geo-status">Cick the button to get your location: </p>
+    <button onclick="getLocation()"> Get Location</button>
+    <div id="location"></div>
+
+    <!-- Drag and Drop API Example -->
+
+    
+
+
+
+    </div>
+
+
+</body>
+</html>
