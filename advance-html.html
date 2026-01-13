@@ -1,50 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced HTML Concepts</title>
-    <meta name="description" content="Adavnced HTML concepts,covering accessibility, APIs, SEO, microdata, and more">
-    <meta name="keywords" content="HTML, acessibility, SEO, ARIA, Web API, i18n">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Adavnced HTML concepts,covering accessibility, APIs, SEO, microdata, and more"
+    />
+    <meta
+      name="keywords"
+      content="HTML, acessibility, SEO, ARIA, Web API, i18n"
+    />
+  </head>
+  <body>
     <h2>Acessibility with ARIA</h2>
     <nav role="navigation" aria-label="Main Navigation">
-         
-        <!-- 
+      <!-- 
         role = "navigation" specieifies the role of the element for screen readers
         'aria-label' provides a text description -->
 
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-
-        </ul>
+      <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+      </ul>
     </nav>
 
-    <div role="dialog" aria-labelledby="modal-title"
-    aria-controls="modal-content" >
-
-    <h3 id="modal-title">Dialog Title</h3>
-    <div id="modal-content">
+    <div
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-controls="modal-content"
+    >
+      <h3 id="modal-title">Dialog Title</h3>
+      <div id="modal-content">
         <p>This is a modal dialog controlled by ARIA attribute.</p>
         <button role="button" aria-label="Close Dialog">Close</button>
-
+      </div>
     </div>
 
     <h2>HTML5 APIs</h2>
-    <p id="geo-status">Cick the button to get your location: </p>
-    <button onclick="getLocation()"> Get Location</button>
+    <p id="geo-status">Cick the button to get your location:</p>
+    <button onclick="getLocation()">Get Location</button>
     <div id="location"></div>
 
     <!-- Drag and Drop API Example -->
-
-    
-
-
-
+    <div
+      id="drag-box"
+      draggable="true"
+      ondragstart="drag(event)"
+      style="width: 100px; height: 100px; background-color: lightblue"
+    >
+      Drag Me
     </div>
 
+    <div
+      id="drop-area"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      style="
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #000;
+        margin-top: 20px;
+      "
+    >
+      Drop Here
+    </div>
 
-</body>
+    <h3>Canvas Example</h3>
+    <canvas
+      id="myCanvas"
+      width="300"
+      height="200"
+      style="border: 1px solid black"
+    >
+    </canvas>
+
+    <h2>Custom Elements (Web Components)</h2>
+    <my-element> </my-element>
+
+    <script>
+      class MyElement extends HTMLElement {
+        constructor() {
+          super();
+          this.innerHTML =
+            "<p> This is a custom element defined using web components</p>";
+        }
+      }
+      customElements.define("my-element", MyElement);
+    </script>
+
+    <h2>SEO Best Practices</h2>
+    <h1>Primary Heading</h1>
+    <h2>Sub Heading</h2>
+    <p>
+      Ensure heading are used properly, with an <code>H1</code> for the main
+      heading and subsequent headings for section titiles.
+    </p>
+
+    <img
+      src="https:via.placeholder.com/150"
+      alt="A Placeholder image example"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "SEO best Practices in HTML",
+        "author": "John Doe",
+        "datePublished": "2023-09-15"
+      }
+    </script>
+
+    <h2>Microdata and MetaData</h2>
+    <div itemscope itemtype="https://schema.org/Product">
+      <h3 itemprop="name">Product Name</h3>
+      <p itemprop="description">This is a description of the product</p>
+      <p>Price: <span itemprop="Price">$29.99</span></p>
+    </div>
+    <h2>Progressive Enhancement</h2>
+    <noscript>
+      <p>
+        Your browser does not support Javascript, but this content is still
+        visible
+      </p>
+    </noscript>
+
+    <button>Click Me</button>
+    <script>
+        document.querySelector("button").addEventListener("click",() =>{
+            alert("Button clicked! Javascript is enhancing the experience");
+        });
+    </script>
+
+    <h2>Internationalization (i18n)</h2>
+    <!-- Language attribute for different Languages -->
+     <p lang="es">Hola, este texto esta en espanol.</p>
+     <p lang="fr">Bonjour, ce texte est an francais.</p>
+
+     <p dir = "rtl"> پاپسپدشچپطپبز ز؛کسنززمںمذشنذژںشس؛کو؛قل</p>
+     
+  </body>
 </html>
